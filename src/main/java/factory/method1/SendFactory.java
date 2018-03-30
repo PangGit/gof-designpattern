@@ -1,15 +1,11 @@
-package factorymethod.method1;
+package factory.method1;
 
-import factorymethod.base.MailSender;
-import factorymethod.base.Sender;
-import factorymethod.base.SmsSender;
+import factory.base.MailSender;
+import factory.base.Sender;
+import factory.base.SmsSender;
 
 /**
- * @ClassName SendFactory
- * @Description 1.1、普通工厂模式
- * @author PC-20170417-666
- * @Date 2018年3月30日 上午11:36:26
- * @version 1.0.0
+ * @Description 普通工厂模式
  */
 public class SendFactory {
 
