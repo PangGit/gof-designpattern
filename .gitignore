@@ -1,8 +1,7 @@
-
 /target/
 .project
 .classpath
 gof.design.pattern.iml
 
 .settings/
-.idea/*
+.idea/
