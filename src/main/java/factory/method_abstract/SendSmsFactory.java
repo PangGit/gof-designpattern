@@ -1,7 +1,7 @@
 package factory.method_abstract;
 
-import factory.base.Sender;
-import factory.base.SmsSender;
+import base.Sender;
+import base.SmsSender;
 
 /**
  * @author PC-20170417-666

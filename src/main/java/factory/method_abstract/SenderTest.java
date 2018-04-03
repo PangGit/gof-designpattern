@@ -1,6 +1,6 @@
 package factory.method_abstract;
 
-import factory.base.Sender;
+import base.Sender;
 
 /**
  * @author PC-20170417-666
@@ -13,11 +13,11 @@ public class SenderTest {
     public static void main(String[] args) {
         Provider provider = new SendMailFactory();
         Sender sender = provider.produce();
-        System.out.println(sender.sender(" abstract mail msg "));
+        System.out.println(sender.sender());
 
         provider = new SendSmsFactory();
         sender = provider.produce();
-        System.out.println(sender.sender("abstract sms msg "));
+        System.out.println(sender.sender());
     }
 
 }
