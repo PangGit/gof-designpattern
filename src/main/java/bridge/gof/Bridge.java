@@ -12,7 +12,7 @@ public abstract class Bridge {
         this.source = source;
     }
 
-    public void method(){
+    public void method() {
         source.method();
     }
 
