@@ -16,7 +16,7 @@ public class Originator {
     }
 
     public void show() {
-        System.out.println("state = " + this.state);
+        System.out.println("state = " + this.getState());
     }
 
     public String getState() {
