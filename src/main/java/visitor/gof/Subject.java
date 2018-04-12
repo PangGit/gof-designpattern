@@ -4,7 +4,7 @@ package visitor.gof;
  */
 public interface Subject {
 
-    public void accept(Visitor visitor);
+    void accept(Visitor visitor);
 
-    public String getSubject();
+    String getSubject();
 }
