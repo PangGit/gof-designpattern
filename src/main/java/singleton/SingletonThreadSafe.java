@@ -26,6 +26,11 @@ public class SingletonThreadSafe {
         }
         return instance;
     }
+
+    public void test() {
+        System.out.println("----SingletonThreadSafe---test----");
+
+    }
 }
 /*
  * 并发编程中的三个概念
