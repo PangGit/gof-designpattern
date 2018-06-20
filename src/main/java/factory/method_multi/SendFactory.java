@@ -9,11 +9,11 @@ import base.SmsSender;
  */
 public class SendFactory {
 
-    public Sender produceMail(){
+    public Sender produceMail() {
         return new MailSender();
     }
 
-    public Sender produceSms(){
+    public Sender produceSms() {
         return new SmsSender();
     }
 }

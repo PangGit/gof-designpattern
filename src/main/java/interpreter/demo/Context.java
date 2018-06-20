@@ -2,9 +2,8 @@ package interpreter.demo;
 
 /**
  * 包含解释器之外的一些全局信息
- * 
- * @author liu yuning
  *
+ * @author liu yuning
  */
 public class Context {
 
@@ -12,19 +11,19 @@ public class Context {
     private String output;
 
     public String getInput() {
-	return input;
+        return input;
     }
 
     public void setInput(String input) {
-	this.input = input;
+        this.input = input;
     }
 
     public String getOutput() {
-	return output;
+        return output;
     }
 
     public void setOutput(String output) {
-	this.output = output;
+        this.output = output;
     }
 
 }

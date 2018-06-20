@@ -1,5 +1,5 @@
 package bridge.gof;
 
 public interface Sourceable {
-    void  method();
+    void method();
 }

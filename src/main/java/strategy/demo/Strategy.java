@@ -8,7 +8,7 @@ public interface Strategy {
 }
 
 class ConcreteStrategyA implements Strategy {
-    public ConcreteStrategyA(){
+    public ConcreteStrategyA() {
         System.out.println("策略A的具体算法实现");
     }
 
@@ -20,7 +20,7 @@ class ConcreteStrategyA implements Strategy {
 }
 
 class ConcreteStrategyB implements Strategy {
-    public ConcreteStrategyB(){
+    public ConcreteStrategyB() {
         System.out.println("策略B的具体算法实现");
     }
 
@@ -32,7 +32,7 @@ class ConcreteStrategyB implements Strategy {
 }
 
 class ConcreteStrategyC implements Strategy {
-    public ConcreteStrategyC(){
+    public ConcreteStrategyC() {
         System.out.println("策略C的具体算法实现");
     }
 

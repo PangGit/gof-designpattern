@@ -22,5 +22,5 @@ public class CalculatorUtil {
         arrayInt[1] = Integer.parseInt(array[1]);
         return arrayInt;
     }
-    
+
 }

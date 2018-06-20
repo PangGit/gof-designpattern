@@ -4,7 +4,9 @@ import prototype.Prototype;
 
 import java.io.*;
 
-/** 简历类 */
+/**
+ * 简历类
+ */
 public class Resume implements Cloneable, Serializable {
     private static final long serialVersionUID = -4410449301166191440L;
 
@@ -34,7 +36,7 @@ public class Resume implements Cloneable, Serializable {
 
     // 通过对象序列化，实现深度拷贝
     public Object deepClone() throws IOException, ClassNotFoundException {
-       return new Prototype().cloneObject(this);
+        return new Prototype().cloneObject(this);
     }
 
     public String getName() {

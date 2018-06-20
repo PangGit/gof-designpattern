@@ -14,22 +14,23 @@ public class Singleton4 {
 
     private Vector properties = null;
 
-    public Vector getProperties(){
+    public Vector getProperties() {
         return properties;
     }
 
-    private Singleton4(){}
+    private Singleton4() {
+    }
 
-    private static synchronized void syncInit(){
-        if (instance == null){
+    private static synchronized void syncInit() {
+        if (instance == null) {
             instance = new Singleton4();
         }
     }
 
-    private static Singleton4 getInstance(){
-        if (instance == null){
+    private static Singleton4 getInstance() {
+        if (instance == null) {
             syncInit();
         }
-        return  instance;
+        return instance;
     }
 }

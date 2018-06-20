@@ -1,5 +1,5 @@
 package decorator;
 
 public interface Sourceable {
-    public void  method();
+    public void method();
 }

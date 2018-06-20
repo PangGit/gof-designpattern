@@ -2,7 +2,9 @@ package prototype.demo;
 
 import java.io.Serializable;
 
-/** 工作经历类，为演示深度拷贝和浅度拷贝而用 */
+/**
+ * 工作经历类，为演示深度拷贝和浅度拷贝而用
+ */
 public class WorkExperience implements Serializable {
     private static final long serialVersionUID = 1L;
 

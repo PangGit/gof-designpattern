@@ -54,12 +54,12 @@ public class TreeNode {
     }
 
     public void display(int depth) {
-        System.out.println(StringUtil.repeatableString("-", depth) +this.name);
+        System.out.println(StringUtil.repeatableString("-", depth) + this.name);
 
         Enumeration enumeration = children.elements();
-        while (enumeration.hasMoreElements()){
+        while (enumeration.hasMoreElements()) {
             TreeNode treeNode = (TreeNode) enumeration.nextElement();
-            treeNode.display(depth+2);
+            treeNode.display(depth + 2);
         }
     }
 }

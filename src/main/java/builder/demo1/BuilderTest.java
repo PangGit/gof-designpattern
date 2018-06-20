@@ -14,7 +14,7 @@ public class BuilderTest {
         builder.produceSmsSender(2);
 
         for (int i = 0; i < builder.list.size(); i++) {
-            String  msg = builder.list.get(i).sender();
+            String msg = builder.list.get(i).sender();
             System.out.println(msg);
         }
     }

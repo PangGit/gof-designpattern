@@ -19,7 +19,7 @@ public class FlyweightTest {
         Statement statement = conn.createStatement();
         ResultSet resultSet = statement.executeQuery("select * from user");
 
-        while (resultSet.next()){
+        while (resultSet.next()) {
             System.out.println(resultSet.getString("username"));
         }
 

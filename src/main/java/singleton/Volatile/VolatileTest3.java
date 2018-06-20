@@ -7,39 +7,39 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Description 采用Lock
  */
 public class VolatileTest3 {
-	
-	public int inc = 0;
-	
-	Lock lock = new ReentrantLock();
 
-	public void increase() {
-		lock.lock();
-		try {
-			inc++;
-		} finally {
-			lock.unlock();
-		}
-	}
+    public int inc = 0;
 
-	public static void main(String[] args) {
-		long currentTimeMillis = System.currentTimeMillis() ;
-		
-		final VolatileTest3 test = new VolatileTest3();
-		
-		for (int i = 0; i < 10; i++) {
-			new Thread(() -> {
-				for (int j = 0; j < 1000; j++)
-					test.increase();
-			}).start();
-		}
+    Lock lock = new ReentrantLock();
 
-		while (Thread.activeCount() > 1) // 保证前面的线程都执行完
-			Thread.yield();
-		
-		System.out.println("耗时:" + (System.currentTimeMillis()-currentTimeMillis));
-        
-		System.out.println(test.inc);
-	}
+    public void increase() {
+        lock.lock();
+        try {
+            inc++;
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public static void main(String[] args) {
+        long currentTimeMillis = System.currentTimeMillis();
+
+        final VolatileTest3 test = new VolatileTest3();
+
+        for (int i = 0; i < 10; i++) {
+            new Thread(() -> {
+                for (int j = 0; j < 1000; j++)
+                    test.increase();
+            }).start();
+        }
+
+        while (Thread.activeCount() > 1) // 保证前面的线程都执行完
+            Thread.yield();
+
+        System.out.println("耗时:" + (System.currentTimeMillis() - currentTimeMillis));
+
+        System.out.println(test.inc);
+    }
 
 }
 

@@ -8,7 +8,7 @@ public interface Strategy2 {
 }
 
 class ConcreteStrategyD implements Strategy2 {
-    public ConcreteStrategyD(){
+    public ConcreteStrategyD() {
         System.out.println("策略D的具体算法实现");
     }
 
