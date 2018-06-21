@@ -1,7 +1,6 @@
 package proxy.dynamic;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 import sun.misc.ProxyGenerator;
 
@@ -10,7 +9,6 @@ import sun.misc.ProxyGenerator;
  *
  * @author zyb
  * @since 2012-8-9
- * @see http://rejoy.iteye.com/blog/1627405?page=3#comments
  */
 public class ProxyGeneratorUtils {
 

@@ -1,5 +1,7 @@
 package proxy.dynamic;
 
+import java.io.IOException;
+
 /**
  * 具体调用
  */
