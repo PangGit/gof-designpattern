@@ -15,7 +15,7 @@ public class DynamicProxy implements InvocationHandler {
     public Object bind(Object obj){
         this.obj = obj;
         // 绑定该类实现的所有接口，取得代理类
-        return Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), this);
+        return Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), obj.getClass().getInterfaces(), this);
         // 通过 Proxy.newProxyInstance 创建的代理对象是在jvm运行时动态生成的一个对象，它并不是我们的InvocationHandler类型，也不是我们定义的那组接口的类型，
         // 而是在运行是动态生成的一个对象，并且命名方式都是这样的形式，以$开头，proxy为中，最后一个数字表示对象的标号。
 
@@ -27,10 +27,9 @@ public class DynamicProxy implements InvocationHandler {
         Object result = null;
 
         //这里就可以进行所谓的AOP编程了
-
-        //在调用具体函数方法前，执行功能处理
+        System.out.println("---------在调用具体函数方法前，执行功能处理---------");
         result = method.invoke(obj,args);
-        //在调用具体函数方法后，执行功能处理
+        System.out.println("---------在调用具体函数方法后，执行功能处理---------");
 
         return result;
     }
