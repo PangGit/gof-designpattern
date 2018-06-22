@@ -10,14 +10,14 @@ import sun.misc.ProxyGenerator;
  * @author zyb
  * @since 2012-8-9
  */
-public class ProxyGeneratorUtils {
+class ProxyGeneratorUtils {
 
     /**
      * 把代理类的字节码写到硬盘上
      *
      * @param path 保存路径
      */
-    public static void writeProxyClassToHardDisk(String path) {
+    static void writeProxyClassToHardDisk(String path) {
 
         // 第一种方法，这种方式在刚才分析ProxyGenerator时已经知道了
         //System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", true);
@@ -35,6 +35,7 @@ public class ProxyGeneratorUtils {
             e.printStackTrace();
         } finally {
             try {
+                assert out != null;
                 out.close();
             } catch (IOException e) {
                 e.printStackTrace();

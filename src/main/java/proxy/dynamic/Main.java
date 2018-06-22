@@ -8,11 +8,8 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] str) {
-
-        //method1();
-
+        method1();
         method2();
-
     }
 
     public static void method1() {
@@ -34,9 +31,8 @@ public class Main {
         iProxy.buyTicket();
     }
 
-
     public static void method2() {
         // 把代理类的字节码写到硬盘上
-        ProxyGeneratorUtils.writeProxyClassToHardDisk("D:/$Proxy0.class");
+        ProxyGeneratorUtils.writeProxyClassToHardDisk("$Proxy0.class");
     }
 }
